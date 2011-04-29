@@ -1,14 +1,35 @@
 body {
-  background:#000000;
-  font-family:Verdana;
+  font-family:Arial;
+
+  
 }
 
-a {
-  color:white;
-  font-size:150px;
-  text-decoration:none;
+#cont {
+  position:absolute;
+  top:0; bottom:0; right:0; left:0px;
+  background: #4C2E2E;
+  /* Mozilla: */
+  background: -moz-linear-gradient(top, #4C2E2E, #694647);
+  /* Chrome, Safari:*/
+  background: -webkit-gradient(linear,left top, left bottom, from(#4C2E2E), to(#694647));
+  /* MSIE */
+  filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#4C2E2E', EndColorStr='#694647', GradientType=0);
 }
+
 
 #middle {
-  text-align:center; margin-top:200px;
+  position:absolute;
+  top:40%; width:100%;
+  text-align:center;
+  color:white;
+  font-size:30px;
+  text-decoration:none;
+  text-shadow: 2px 1px 0px #775E5E;
+}
+
+#footer {
+  position:absolute;
+  right:0; bottom:0;
+  color:white;
+  font-size:30px;
 }
