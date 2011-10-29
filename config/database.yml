@@ -1,27 +1,28 @@
 login: &login
-  adapter: postgresql
-  username: nemot.org
-  password: NewPass
-  host: localhost
-  port: 5433
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: nemot.org
+  pool: 5
+  username: root
+  password: Gimler12
 
 test:
   <<: *login
-  database: nemot_test
+#  database: nemot_test
 
 production:
   <<: *login
-  database: nemot_prod
+#  database: nemot_prod
 
 staging:
   <<: *login
-  database: nemot_prod
+#  database: nemot_prod
 
 development:
   <<: *login
-  database: nemot_prod
+#  database: nemot_prod
 
 cucumber:
   <<: *login
-  database: nemot_test
+#  database: nemot_test

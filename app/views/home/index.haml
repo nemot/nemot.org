@@ -1,0 +1,39 @@
+#letters
+  A B C D E F G H I J K L M N O P Q S R T U V W X Y Z 
+
+#center-logo
+  Something wrong?
+
+#contact-info.block
+  %h3
+    Call nemot!
+
+  .right-part
+    Phone: +99897 494-75-02
+    &nbsp;&nbsp;&nbsp;
+    Skype: nemot.work
+    &nbsp;&nbsp;&nbsp;
+    Gmail:
+    =link_to "gnemot@gmail.com", "mailto:gnemot@gmail.com"
+
+:javascript
+  $(function(){
+    var blocks = ['contact-info', 'who-am-i']
+    $("#center-logo").bind("click", function(){  
+      $("#letters").fadeOut('fast',function(){
+        $("#letters").html("A B C D E F G I H J K L M N O P Q R S T U V W X Y Z");
+        $("#letters").fadeIn();
+        $("#center-logo").text('Still wrong?')
+        $("#center-logo").bind('click', function(){          
+          $("#center-logo").fadeOut('fast',function(){
+            $("#letters").html("A B C D E F G H I J K L M N O P Q R S T U V W X Y Z");
+            $("#contact-info.block").fadeIn('fast')
+          })
+        })
+      })
+      
+    })
+  })
+
+
+
